@@ -13,6 +13,7 @@ public class ChangeTerrain : MonoBehaviour {
 				} else {
 					renderer.material.SetColor ("_Color", Color.red);
 				}
+				GameObject.Find("Player").GetComponent<PlayerController>().changeColor(renderer.material.GetColor ("_Color"));
 				ClickFlag = true;
 			}
 		} else {

@@ -13,4 +13,12 @@ public class PlayerController : MonoBehaviour {
 
 		rigidbody.AddForce (movement*speed*Time.deltaTime); 
 	}
+
+	public void changeColor(Color color) {
+		if (color == Color.red) {
+			renderer.material.SetColor ("_Color", Color.blue);
+		} else if (color == Color.blue) {
+			renderer.material.SetColor ("_Color", Color.red);
+		}
+	}
 }
